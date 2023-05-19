@@ -34,19 +34,36 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
-
 * [Java](https://maven.apache.org/) - Gerente de Dependência
+* [Analisador Lexico](https://github.com/isabeleLima/AnalisadorLexico)
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+<table>
+  <tr>
+	<td align="center">
+	      <a href="https://github.com/Rigobertto">
+		<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54067766?v=4" width="100px;" alt=""/>
+		<br /><sub><b>👩‍💻 Rigoberto</b></sub>
+	      </a>
+	</td>
+    <td align="center">
+      <a href="https://github.com/isabeleLima">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/58983203?v=4" width="100px;" alt=""/>
+        <br /><sub><b>👩‍💻 Isabele Cristina</b></sub>
+      </a>
+    </td>
+	<td align="center">
+	      <a href="https://github.com/KennedyEduRG">
+		<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/112023497?v=4" width="100px;" alt=""/>
+		<br /><sub><b>👩‍💻 Kennedy</b></sub>
+	      </a>
+	    </td>
+	<td align="center">
+      <a href="https://github.com/pslayne">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/58180438?v=4" width="100px;" alt=""/>
+        <br /><sub><b>👩‍💻 Layne</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
