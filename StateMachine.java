@@ -13,6 +13,7 @@ public class StateMachine {
         open_close_blocks = new Stack<>();
         states = new State[n];
         init_states();
+        current = states[0];
     }
 
     public void init_states() {
@@ -39,7 +40,10 @@ public class StateMachine {
         states[2] = new State("Q2", false, 
                         new Transition("PROPRIEDADE", 
                         "Q3", 
-                        false, false)
+                        false, false),
+                        new Transition("(", 
+                        "Q2", 
+                        true, false)
                     );
         states[3] = new State("Q3", false, 
                         new Transition("PALAVRA RESERVADA", 
@@ -67,7 +71,7 @@ public class StateMachine {
                         true, false)
                     );
         states[5] = new State("Q4", false,
-                        new Transition("PROPRIEDADE",
+                        new Transition("CLASSE",
                         "Q7",
                         false, false
                         ), 
@@ -86,7 +90,13 @@ public class StateMachine {
                         new Transition("OPERADOR RELACIONAL",
                         "Q18",
                         false, false
-                        ) 
+                        ),
+                        new Transition("COMPARACAO", 
+                        "Q5", 
+                        false, false),
+                        new Transition("VALUE", 
+                        "Q5", 
+                        false, false)
                     );
         states[6] = new State("Q5", false, 
                     new Transition("NUMERO", 
@@ -115,6 +125,12 @@ public class StateMachine {
                 new Transition("AND", 
                 "Q2", 
                 false, false),
+                new Transition("PROPRIEDADE", 
+                "Q3", 
+                false, false),
+                new Transition("OR", 
+                "Q4", 
+                false, false),
                 new Transition(")", 
                 "Q7", 
                 false, true)
@@ -123,7 +139,7 @@ public class StateMachine {
                 new Transition("AND", 
                 "Q2", 
                 false, false),
-                new Transition("PROPRIEDADE", 
+                new Transition("CLASSE", 
                 "Q7", 
                 false, false),
                 new Transition(")", 
