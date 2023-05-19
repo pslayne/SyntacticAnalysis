@@ -193,7 +193,7 @@ public class StateMachine {
             false, false)
             );
         states[18] = new State("Q13", false, 
-            new Transition("CLASSE", 
+            new Transition("INDIVIDUO", 
             "Q14", 
             false, false)
             );

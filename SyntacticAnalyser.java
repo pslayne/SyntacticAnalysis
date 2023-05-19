@@ -13,7 +13,7 @@ public class SyntacticAnalyser {
         try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivo))) {
             String linha;
             while ((linha = br.readLine()) != null) {
-                tokens.add(linha);
+                tokens.add(linha.trim());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class SyntacticAnalyser {
                     }
                 }
             } 
-            if (state_machine.current.is_final) {
+            if (state_machine.current.is_final && state_machine.open_close_blocks.empty()) {
                 chain.accepted = true;
             }
 
