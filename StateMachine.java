@@ -4,10 +4,10 @@ public class StateMachine {
     public String[] opening = { "(", "[", "{"};
     public String[] closing = { ")", "]", "}"};
 
-    public static Stack<String> open_close_blocks;
-    public static State[] states;
+    public Stack<String> open_close_blocks;
+    public State[] states;
 
-    public static State current;
+    public State current;
 
     public StateMachine(int n) {
         open_close_blocks = new Stack<>();
@@ -16,8 +16,11 @@ public class StateMachine {
         current = states[0];
     }
 
+    public void reset() {
+        current = states[0];
+    }
+
     public void init_states() {
-        // nos estados finais se eu receber CLASSE ou fim do input eu aceito a cadeia
         states[0] = new State("Q0", false, 
                         new Transition("CLASSE", 
                         "Q1", 
