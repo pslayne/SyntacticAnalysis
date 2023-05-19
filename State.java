@@ -1,11 +1,20 @@
 public class State {
-    public String state; //estado atual
-    public String final_state; //estado final se for uma cadeia aceita
-    public boolean accepted; //se foi aceita
+    public String name;
+    public boolean is_final;
+    public Transition[] transitions;
 
-    public State(String state, String final_state, boolean accepted) {
-        this.state = state;
-        this.final_state = final_state;
-        this.accepted = accepted;
+    public State(String name, boolean is_final, Transition... transitions) {
+        this.name = name;
+        this.is_final = is_final;
+        this.transitions = transitions;
+    }
+
+    public Transition search_transition(String input) {
+        for (int i = 0; i < transitions.length; i++) {
+            if(transitions[i].input.equals(input)) {
+                return transitions[i];
+            }
+        }
+        return null;
     }
 }
