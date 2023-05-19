@@ -1,44 +1,94 @@
-# Analisador Sintático
+<h1 align="center">
 
-Analisador Sintático construído em Java para compor a nota da 3° unidade da disciplina de Compiladores
+Analisador Sintático
 
-## 🚀 Começando
+</h1>
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+<p align="center">
+  Implementação de um Analisador Sintático para reconhecimento da linguagem OWL2 (Web Ontology Language) no formato Manchester Syntax.
+</p>
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+<h4 align="center">
+	🖥️&nbsp; Compiladores 🖥️ </br>
+</h4>
 
-## ⚙️ Executando os testes
+Sumario
+=================
+<!--ts-->
+   * [💡 O que é um Analisador Sintatico?](#question)
+   * [🛠 OWL e Manchester Syntax](#OWL)
+   * [:gear:  Implementação ](#implementation)
+   * [:memo: Funções ](#function)
+   * [👨‍💻 Autores](#authors)
+<!--te-->
 
-A classe Main lê um arquivo de texto e passa pelo processamento do analisador léxico, onde é feito uma análise de cada palavra, definindo o seu tipo de token. Veja o exemplo de arquivo cod.txt
+</br>
+<h2 id="question">💡 O que é um Analisador Sintatico?</h2>
+O analisador sintático, também conhecido como parser, trabalha com os tokens gerados pelo analisador léxico. 
+Ele verifica a estrutura gramatical do código fonte, de acordo com as regras da linguagem de programação em questão. 
+O analisador sintático utiliza uma gramática formal para determinar se a sequência de tokens é válida de acordo com as regras da linguagem.
 
-### 🔩 Analise os testes de ponta a ponta
+</br> 
 
-Explique que eles verificam esses testes e porquê.
+<h2 id="OWL">🛠 OWL e Manchester Syntax</h2>
+A linguagem OWL (Web Ontology Language) é baseada em RDF (Resource Description
+Framework) e XML (eXtensible Markup Language) para relacionar recursos que têm algo a ver um com o outro
+na Web. Tudo na Web é um recurso: uma página, um perfil de utilizador de redes sociais, um vídeo, um áudio,
+um texto, entre outros. O nível de granularidade dos recursos na Web é vasto. Cada recurso pode ser
+identificado por uma URI (Unified Resource Identifier).
 
-```
-Dar exemplos
-```
+</br>
 
-### ⌨️ E testes de estilo de codificação
+Manchester Syntax, para descrição de ontologias em Description Logics:
+</br>
+Pizza THAT
+hasTopping SOME MozzarellaTopping AND
+hasTopping SOME TomatoTopping AND
+hasTopping ONLY (MozzarellaTopping OR
+TomatoTopping OR
+PepperonniTopping)
 
-Explique que eles verificam esses testes e porquê.
+</br>
+Description Logics é a lógica de descrever coisas com base nas relações que elas têm entre si. Uma linguagem
+baseada em Description Logics é geralmente declarativa, ou seja, não contém métodos ou funções de
+transformação. Sendo assim, os conceitos de uma ontologia, por exemplo, são descritos sequencialmente, como
+declarações avulsas. Um motor de inferência (reasoner) lê essas declarações e realiza inferências sobre
+relações implícitas que poderiam conectar ainda mais os conceitos de uma ontologia. 
 
-```
-Dar exemplos
-```
 
-## 📦 Implantação
+<h2 id="implementation">:gear: Implementação</h2>
+Nosso analisador Sintatico tem com objetivo o reconhecimento da gramatica da linguagem OWL2 (Web Ontology
+Language) no formato Manchester Syntax. O programa é feito em java e utiliza a implementação do [Analisador Lexico](https://github.com/isabeleLima/AnalisadorLexico) 
+previvamente construido para geração dos tokens.
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-## 🛠️ Construído com
+</br>
 
-* [Java](https://maven.apache.org/) - Gerente de Dependência
-* [Analisador Lexico](https://github.com/isabeleLima/AnalisadorLexico)
+<h2 id="function">:memo: Funções</h2>
+Resumo das funções utilizadas na implementação:
 
-## ✒️ Autores
+- <h3>iniciarPalavrasReservadas</h3>
+Primeira Função do arquivo que inicial o vetor de palavras reservadas sendo elas:
 
+  - SOME
+  - ALL
+  - VALUE
+  - MIN
+  - MAX
+  - EXACTLY
+  - NOT 
+  - AND
+  - OR 
+
+- <h3>readFile</h3>
+Essa função recebe um path para um arquivo txt contendo a ontologia em formato Manchester Synta, lê as linhas do arquivo separando os tokens e os armazenando em um array
+- <h3>returnType</h3>
+Retorna o tipo do token (PALAVRA RESERVADA, CLASSE, PROPRIEDADE, NUMERO OU DESCONHECIDO) baseado na alise de REGEX
+- <h3>drawTable e padRight</h3>
+Funções para desenhar a tabela de tokens e tipos no terminal para melhor vizualização.
+</br>
+
+<h2 id="authors">👨‍💻 Autores</h2>
 <table>
   <tr>
 	<td align="center">
