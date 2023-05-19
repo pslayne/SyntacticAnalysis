@@ -1,5 +1,3 @@
-package SyntacticAnalysis;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,22 +22,17 @@ public class SyntacticAnalyser {
 
     public static List<String> analyse() {
         List<String> result = new ArrayList<>();
-        
-        Stack<String> open_close_parentesis = new Stack<>();
-        Stack<String> open_close_brackets = new Stack<>();
 
-        // estado inicial da máquina de estados
-        State init = new State("Inicial", "", false);
+        // inicia a cadeia
+        Chain chain = new Chain();
 
         for(String element : tokens) {
-            
+            // quando chegar num estado final chain.accepted = true
+            // se o próximo token for CLASSE ou o fim da lista, aceita a cadeia e recomeça
+            // se não chain.accepted = false e continua a computação
         }
 
         return result;
-    }
-
-    public static State state_machine(State current, String input) {
-        
     }
 
 }
