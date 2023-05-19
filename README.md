@@ -71,12 +71,13 @@ Resumo das funções utilizadas na implementação:
 contem a classe State com o seguintes atributos:
 
   - State
-  retorna o estado atual
+  	- retorna o estado atual
+  
   - final_state
-  retorna o estado final se for uma cadeia aceita
+  	- retorna o estado final se for uma cadeia aceita
+  
   - accepted
-  retorna um boolena que diz se foi aceito ou não
- 
+  	- retorna um boolena que diz se foi aceito ou não	
 </br>
 
 <h2 id="authors">👨‍💻 Autores</h2>
