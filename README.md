@@ -67,25 +67,16 @@ previvamente construido para geração dos tokens.
 <h2 id="function">:memo: Funções</h2>
 Resumo das funções utilizadas na implementação:
 
-- <h3>iniciarPalavrasReservadas</h3>
-Primeira Função do arquivo que inicial o vetor de palavras reservadas sendo elas:
+- <h3>Arquivo State</h3>
+contem a classe State com o seguintes atributos:
 
-  - SOME
-  - ALL
-  - VALUE
-  - MIN
-  - MAX
-  - EXACTLY
-  - NOT 
-  - AND
-  - OR 
-
-- <h3>readFile</h3>
-Essa função recebe um path para um arquivo txt contendo a ontologia em formato Manchester Synta, lê as linhas do arquivo separando os tokens e os armazenando em um array
-- <h3>returnType</h3>
-Retorna o tipo do token (PALAVRA RESERVADA, CLASSE, PROPRIEDADE, NUMERO OU DESCONHECIDO) baseado na alise de REGEX
-- <h3>drawTable e padRight</h3>
-Funções para desenhar a tabela de tokens e tipos no terminal para melhor vizualização.
+  - State
+  retorna o estado atual
+  - final_state
+  retorna o estado final se for uma cadeia aceita
+  - accepted
+  retorna um boolena que diz se foi aceito ou não
+ 
 </br>
 
 <h2 id="authors">👨‍💻 Autores</h2>
